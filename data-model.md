@@ -5,8 +5,6 @@ Dieses Datenmodell bildet das Konzept von **TaskScore** ab:
 - Aufgaben werden einem Wochentag zugeordnet und mit Punkten bewertet
 - Fortschritt ergibt sich aus erledigten Punkten
 
-> Hinweis: Aktueller Stand ist ein UI-/Routing-Prototyp ohne Datenbank.
-> Das Modell beschreibt die geplante persistente Struktur (z. B. SQLite).
 
 ---
 
