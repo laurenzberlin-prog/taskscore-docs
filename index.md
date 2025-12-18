@@ -1,8 +1,7 @@
 # TaskScore – Documentation Website
 
 Diese Website dokumentiert den aktuellen Stand der Web-App **TaskScore**.
-Der Fokus liegt auf der Struktur der Anwendung (UI, Datenmodell, Routing)
-und nicht auf einer vollständigen technischen Implementierung.
+Der Fokus liegt auf der Struktur der Anwendung (UI, Datenmodell, Routing).
 
 ---
 
