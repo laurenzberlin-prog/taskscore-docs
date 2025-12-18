@@ -1,10 +1,16 @@
 # Datenmodell (Current Version)
 
-Dieses Datenmodell bildet das Konzept von TaskScore ab:
-- pro Woche steht ein Punktekonto (z. B. 100 Punkte) zur Verfügung
-- Aufgaben werden einem Wochentag zugeordnet und mit Punkten bewertet
-- Fortschritt ergibt sich aus erledigten Punkten
+Hier ist geplante Datenmodell der Web-App TaskScore aufgezeigt.
+Es zeigt die UI-Screens und Flask-Routes. Eine Datenbank ist aktuell nicht implementiert
 
+---
+
+## Überblick
+
+- Pro Woche steht ein festes Punktekonto (z. B. 100 Punkte) zur Verfügung
+- Aufgaben werden einem Wochentag zugeordnet
+- Punkte repräsentieren Zeitaufwand und Priorität
+- Fortschritt ergibt sich aus erledigten Punkten
 
 ---
 
@@ -12,7 +18,7 @@ Dieses Datenmodell bildet das Konzept von TaskScore ab:
 
 ### USER
 | Feld | Typ | Beschreibung |
-|------|-----|--------------|
+|-----|-----|-------------|
 | id | integer (PK) | eindeutige Nutzer-ID |
 | name | string | Anzeigename |
 | email | string | optional |
@@ -21,9 +27,9 @@ Dieses Datenmodell bildet das Konzept von TaskScore ab:
 
 ### WEEK_PLAN
 | Feld | Typ | Beschreibung |
-|------|-----|--------------|
-| id | integer (PK) | eindeutige Wochenplan-ID |
-| user_id | integer (FK) | gehört zu USER |
+|-----|-----|-------------|
+| id | integer (PK) | eindeutige Wochen-ID |
+| user_id | integer (FK) | Referenz auf USER |
 | week_start | date | Startdatum der Woche (Montag) |
 | total_points | integer | Wochenbudget (z. B. 100) |
 
@@ -31,29 +37,29 @@ Dieses Datenmodell bildet das Konzept von TaskScore ab:
 
 ### DAY_PLAN
 | Feld | Typ | Beschreibung |
-|------|-----|--------------|
-| id | integer (PK) | eindeutige Tagesplan-ID |
-| week_plan_id | integer (FK) | gehört zu WEEK_PLAN |
-| weekday | string | Montag … Sonntag |
-| planned_points | integer | geplante Punkte für den Tag |
+|-----|-----|-------------|
+| id | integer (PK) | eindeutige Tages-ID |
+| week_plan_id | integer (FK) | Referenz auf WEEK_PLAN |
+| weekday | string | Montag – Sonntag |
+| planned_points | integer | geplante Punkte pro Tag |
 
 ---
 
 ### TASK
 | Feld | Typ | Beschreibung |
-|------|-----|--------------|
+|-----|-----|-------------|
 | id | integer (PK) | eindeutige Aufgaben-ID |
-| week_plan_id | integer (FK) | gehört zu WEEK_PLAN |
+| week_plan_id | integer (FK) | Referenz auf WEEK_PLAN |
 | title | string | Titel der Aufgabe |
-| description | string | Beschreibung |
+| description | string | optionale Beschreibung |
 | weekday | string | zugeordneter Wochentag |
-| points_total | integer | Punktwert der Aufgabe (Aufwand/Priorität) |
-| points_done | integer | bereits erledigte Punkte |
-| status | string | z. B. OPEN / IN_PROGRESS / DONE |
+| points_total | integer | geplante Punkte |
+| points_done | integer | erledigte Punkte |
+| status | string | OPEN / IN_PROGRESS / DONE |
 
 ---
 
-## Beziehungen (ER)
+## Entity-Relationship-Diagramm (ER)
 
 ```mermaid
 erDiagram
@@ -62,32 +68,32 @@ erDiagram
     WEEK_PLAN ||--o{ TASK : includes
 
     USER {
-      int id PK
-      string name
-      string email
+        int id PK
+        string name
+        string email
     }
 
     WEEK_PLAN {
-      int id PK
-      int user_id FK
-      date week_start
-      int total_points
+        int id PK
+        int user_id FK
+        date week_start
+        int total_points
     }
 
     DAY_PLAN {
-      int id PK
-      int week_plan_id FK
-      string weekday
-      int planned_points
+        int id PK
+        int week_plan_id FK
+        string weekday
+        int planned_points
     }
 
     TASK {
-      int id PK
-      int week_plan_id FK
-      string title
-      string description
-      string weekday
-      int points_total
-      int points_done
-      string status
+        int id PK
+        int week_plan_id FK
+        string title
+        string description
+        string weekday
+        int points_total
+        int points_done
+        string status
     }
