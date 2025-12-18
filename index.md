@@ -1,26 +1,26 @@
-TaskScore – Projektdokumentation
+# TaskScore – Projektdokumentation
 
-Diese Seite dokumentiert den aktuellen Stand der Web-App TaskScore 
-(Work-in-Progress Abgabe).
+Diese Seite dokumentiert den aktuellen Stand der Web-App **TaskScore** (Work-in-Progress).
 
-Inhalt
+## Inhalt
 - UI Screens (aktueller Stand)
 - Datenmodell (ER-Diagramm)
 - Zusammenhang zwischen UI, Datenmodell und URL-Routes
 
 ---
 
-UI Screens
+## UI Screens (Current Version)
 
-
-
----
-Datenmodell (Current Version)
-
-
+> Screenshots werden hier eingebettet, sobald sie hochgeladen sind.
 
 ---
 
-URL Routes (Referenz)
+## Datenmodell (Current Version)
 
-Die Implementierung der Routen befindet sich im separaten Code-Repository
+> ER-Diagramm und Tabellenbeschreibung werden hier ergänzt.
+
+---
+
+## URL Routes (Referenz)
+
+Die URL-Routen sind im Code-Repository dokumentiert (README) und in Flask implementiert.
