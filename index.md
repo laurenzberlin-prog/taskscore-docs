@@ -10,8 +10,8 @@ Diese Seite dokumentiert den aktuellen Stand der Web-App **TaskScore**
 ### Startseite
 ![Startseite](screens/home.png)
 
-Die Startseite gibt einen Überblick über das Konzept von TaskScore und
-dient als zentraler Einstiegspunkt zur Anwendung.
+Die Startseite gibt einen Überblick über die Idee von TaskScore und
+dient als Hauptscreen zur Anwendung.
 
 ---
 
@@ -20,18 +20,15 @@ dient als zentraler Einstiegspunkt zur Anwendung.
 
 In dieser Ansicht können Aufgaben angelegt werden.  
 Jede Aufgabe besitzt:
-- Titel
-- Beschreibung
-- Wochentag
-- Punktwert (Zeitaufwand / Priorität)
+Titel, Beschreibung, Wochentag, Punktwert (Zeitaufwand / Priorität)
 
 ---
 
 ### Wochenplan
 ![Wochenplan](screens/plan.png)
 
-Der Wochenplan visualisiert die Punkteverteilung pro Wochentag
-auf Basis eines festen Wochenbudgets (100 Punkte).
+Der Wochenplan zeigt die Punkteverteilung pro Wochentag
+auf Basis eines festen Wochenbudgets von 100 Punkten.
 
 ---
 
@@ -39,9 +36,7 @@ auf Basis eines festen Wochenbudgets (100 Punkte).
 ![Fortschritt](screens/progress.png)
 
 Diese Ansicht zeigt den Fortschritt der Woche:
-- Gesamtpunkte
-- Erledigte Punkte
-- Prozentualer Fortschritt (visuelle Anzeige)
+Gesamtpunkte, Erledigte Punkte, Prozentualer Fortschritt 
 
 ---
 
