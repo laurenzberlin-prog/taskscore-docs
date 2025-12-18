@@ -78,13 +78,3 @@ Jede UI-Seite wird über eine eigene URL-Route bereitgestellt.
 
 Die technische Umsetzung der Routen befindet sich im
 separaten **Code-Repository**.
-
----
-
-## Zusammenfassung
-
-Diese Dokumentation zeigt:
-- den geplanten Funktionsumfang der App
-- die Benutzeroberfläche (UI-Screens)
-- das zugehörige Datenmodell
-- den Zusammenhang zwischen UI, Datenstruktur und Routing
