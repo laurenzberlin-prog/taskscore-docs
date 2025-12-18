@@ -1,9 +1,9 @@
 # Datenmodell (Current Version)
 
 Dieses Datenmodell bildet das Konzept von TaskScore ab:
-pro Woche steht ein Punktekonto (z. B. 100 Punkte) zur Verfügung
-Aufgaben werden einem Wochentag zugeordnet und mit Punkten bewertet
-Fortschritt ergibt sich aus erledigten Punkten
+- pro Woche steht ein Punktekonto (z. B. 100 Punkte) zur Verfügung
+- Aufgaben werden einem Wochentag zugeordnet und mit Punkten bewertet
+- Fortschritt ergibt sich aus erledigten Punkten
 
 
 ---
