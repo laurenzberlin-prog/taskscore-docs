@@ -21,6 +21,8 @@ In dieser Ansicht können Aufgaben angelegt werden.
 Jede Aufgabe besitzt:
 Titel, Beschreibung, Wochentag, Punktwert (Zeitaufwand / Priorität)
 
+Anschließend sollen hier die geplanten Aufgaben aufgelistet werden
+
 ---
 
 ### Wochenplan
