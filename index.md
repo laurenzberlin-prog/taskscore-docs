@@ -59,7 +59,7 @@ Diese Ansicht visualisiert den Fortschritt der Woche:
 Das Datenmodell beschreibt die geplante Struktur zur Speicherung der
 Anwendungsdaten und bildet die Grundlage für UI und Routing.
 
-➡️ **Vollständige Beschreibung:**  
+ **Vollständige Beschreibung:**  
 [data-model.md](data-model.md)
 
 ---
