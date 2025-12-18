@@ -1,62 +1,91 @@
 # TaskScore – Documentation Website
 
-Diese Seite dokumentiert den aktuellen Stand der Web-App TaskScore.
+Diese Website dokumentiert den aktuellen Stand der Web-App **TaskScore**.
+Der Fokus liegt auf der Struktur der Anwendung (UI, Datenmodell, Routing)
+und nicht auf einer vollständigen technischen Implementierung.
 
 ---
 
-## UI Screens
+## Projektidee
+
+TaskScore ist ein Wochen-Task-Planer mit einem festen Punktekonto
+(z. B. 100 Punkte pro Woche).  
+Aufgaben werden nach Zeitaufwand und Priorität bewertet.
+Der Fortschritt wird visuell dargestellt.
+
+---
+
+## UI Screens (Current Version)
 
 ### Startseite
 ![Startseite](screens/home.png)
 
-Die Startseite gibt einen Überblick über die Idee von TaskScore und
-dient als Hauptscreen zur Anwendung.
+Die Startseite erklärt das Grundkonzept der Anwendung und bietet
+Navigation zu allen Hauptansichten.
 
 ---
 
 ### Aufgabenverwaltung
 ![Aufgaben](screens/tasks.png)
 
-In dieser Ansicht können Aufgaben angelegt werden.  
+In dieser Ansicht können Aufgaben geplant werden.
 Jede Aufgabe besitzt:
-Titel, Beschreibung, Wochentag, Punktwert (Zeitaufwand / Priorität)
-
-Anschließend sollen hier die geplanten Aufgaben aufgelistet werden
+- Titel
+- Beschreibung
+- Wochentag
+- Punktwert
 
 ---
 
 ### Wochenplan
 ![Wochenplan](screens/plan.png)
 
-Der Wochenplan zeigt die Punkteverteilung pro Wochentag
-auf Basis eines festen Wochenbudgets von 100 Punkten.
+Der Wochenplan zeigt die geplante Punkteverteilung pro Wochentag
+basierend auf einem festen Wochenbudget.
 
 ---
 
 ### Fortschritt
 ![Fortschritt](screens/progress.png)
 
-Diese Ansicht zeigt den Fortschritt der Woche:
-Gesamtpunkte, Erledigte Punkte, Prozentualer Fortschritt 
+Diese Ansicht visualisiert den Fortschritt der Woche:
+- Gesamtpunkte
+- erledigte Punkte
+- prozentualer Fortschritt (Grafik)
 
 ---
 
-## Zusammenhang UI & Backend
+## Datenmodell
 
-Die dargestellten Screens werden durch eine Flask-Anwendung realisiert.
-Jede UI-Seite entspricht einer eigenen URL-Route:
+Das Datenmodell beschreibt die geplante Struktur zur Speicherung der
+Anwendungsdaten und bildet die Grundlage für UI und Routing.
 
-| UI Screen        | Route       |
-|------------------|-------------|
-| Startseite       | `/`         |
-| Aufgaben         | `/tasks`    |
-| Wochenplan       | `/plan`     |
-| Fortschritt      | `/progress` |
+➡️ **Vollständige Beschreibung:**  
+[data-model.md](data-model.md)
 
 ---
 
-## Datenmodell (aktueller Stand)
+## URL Routes / HTTP Requests
 
-Das Datenmodell befindet sich aktuell in einer einfachen, nicht-persistenten
-Form (In-Memory-Strukturen).  
-Eine spätere Version wird eine Datenbank-Anbindung enthalten.
+Die Anwendung ist mit Flask umgesetzt.
+Jede UI-Seite wird über eine eigene URL-Route bereitgestellt.
+
+| Route | HTTP | Beschreibung |
+|------|------|-------------|
+| `/` | GET | Startseite |
+| `/tasks` | GET | Aufgabenverwaltung |
+| `/plan` | GET | Wochenplan |
+| `/progress` | GET | Fortschrittsanzeige |
+
+Die technische Umsetzung der Routen befindet sich im
+separaten **Code-Repository**.
+
+---
+
+## Zusammenfassung
+
+Diese Dokumentation zeigt:
+- den geplanten Funktionsumfang der App
+- die Benutzeroberfläche (UI-Screens)
+- das zugehörige Datenmodell
+- den Zusammenhang zwischen UI, Datenstruktur und Routing
