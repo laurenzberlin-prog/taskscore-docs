@@ -1,7 +1,6 @@
 # TaskScore – Documentation Website
 
-Diese Seite dokumentiert den aktuellen Stand der Web-App **TaskScore**
-(Work in Progress).
+Diese Seite dokumentiert den aktuellen Stand der Web-App TaskScore.
 
 ---
 
